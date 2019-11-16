@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GCF Finder</title>
+</head>
+
+<body>
+    <h1>GCF and LCM Calulator</h1>
+    <div id="content">
+    <p id="Text">Find LCM and GCF of 2 Numbers</p>
+    <p id="Answer">By Veer Sandhu</p>
+    </div>
+    <br>
+    Number 1: <input type="number" name="userInput" id="userInput" placeholder="Enter First Number"><br><br>
+    Number 2: <input type="number" name="userInput" id="userInput2" placeholder="Enter Second Number">
+    <br><br>
+    <button id="button" onclick="run()">Run</button>
+
+    <script type="text/javaScript">
+        let text = document.getElementById("Text");  
+        let answer = document.getElementById("Answer");
+        function run() {
+            const inputNumber1 = +document.getElementById("userInput").value;
+            const inputNumber2 = +document.getElementById("userInput2").value;
+            var number1 = inputNumber1;
+            var number2 = inputNumber2;
+
+            if (number2>number1) {
+                for (i=0; i<20; i++) {
+                        gcf = number1%number2;
+                        b = number2%gcf
+                    if (b===0) {            
+                        text.innerText = "GCF: " + gcf;
+                        i=20;
+                    } else {
+                        number1=number2;
+                        number2=gcf;
+                        console.log("no")
+                        console.log(i);
+                        text.innerText = "GCF: " + gcf;
+                    }
+                }        
+            } else /*if (number1>number2)*/{
+                for (i=0; i<20; i++) {
+                        gcf = number2%number1;
+                        b = number1%gcf
+                    if (b===0) {            
+                        text.innerText = "GCF: " + gcf;
+                        i=20;
+                    } else {
+                        number2=number1;
+                        number1=gcf;
+                        console.log("no")
+                        console.log(i);
+                        text.innerText = "GCF: " + gcf;
+                    } 
+                }
+            }
+            lcm = inputNumber1*inputNumber2/gcf
+            answer.innerText = "LCM: " + lcm;
+        }
+    </script>
+    <style>
+        #button {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            padding: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background-color: white;
+        }
+
+        body {
+            background-color: grey;
+            margin-left: 20px;
+        }
+
+        #userInput {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        #userInput2 {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        /* #content{
+            border-width: 5px;
+            border-style: solid;
+            border-color: black;
+            margin-right: 1200px;
+            padding-left: 10px;
+            background-color: white;
+        } */
+    </style>
+</body>
+</html>
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>GCF Finder</title>
+</head>
+
+<body>
+    <h1>GCF and LCM Calulator</h1>
+    <p id="Text">Find LCM and GCF of 2 Number</p>
+    <p id="Answer">By Veer Sandhu</p>
+
+    Number 1: <input type="text" name="userInput" id="userInput" placeholder="Enter First Number"><br><br>
+    Number 2: <input type="text" name="userInput" id="userInput2" placeholder="Enter Second Number">
+    <br><br>
+    <button id="button" onclick="run()">Run</button>
+
+    <script type="text/javaScript">
+        let text = document.getElementById("Text");  
+        let answer = document.getElementById("Answer");
+        function run() {
+            var number1 = +document.getElementById("userInput").value;
+            var number2 = +document.getElementById("userInput2").value;
+            
+            if (number2>number1) {
+                for (i=0; i<10; i++) {
+                        a = number1%number2;
+                        b = number2%a
+                    if (b===0) {            
+                        text.innerText = "GCF: " + a;
+                        i=10;
+                    } else {
+                        number1=number2;
+                        number2=a;
+                        console.log("no")
+                        console.log(i);
+                        text.innerText = "GCF: " + a;
+                        answer.innerText = "LCM: " + lcm;
+                    }   
+                }        
+            } else /*if (number1>number2)*/{
+                for (i=0; i<10; i++) {
+                        a = number2%number1;
+                        b = number1%a
+                    if (b===0) {            
+                        text.innerText = "GCF: " + a;
+                        i=10;
+                    } else {
+                        number2=number1;
+                        number1=a;
+                        console.log("no")
+                        console.log(i);
+                        text.innerText = "GCF: " + a;
+                    }   
+                }
+            }
+        }
+    </script>
+    <style>
+        #button {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+            padding: 10px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            background-color: white;
+        }
+
+        body {
+            background-color: grey;
+            margin-left: 20px;
+        }
+
+        #userInput {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        #userInput2 {
+            border-width: 2px;
+            border-style: solid;
+            border-color: black;
+        }
+    </style>
+</body>
+
+</html> -->

@@ -1,0 +1,24 @@
+.style {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.style2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.style3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.inputs {
+    grid-column: 1;
+    background-color:white
+}
+
+.box {
+    border-width: 3px;
+}

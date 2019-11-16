@@ -1,0 +1,81 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>{{title}}</h1>
+<div class="style">
+  <div class="inputs">
+    <h3>Point 1</h3>
+    <br>
+    <input class="box" placeholder=" x Value" type="number" name="x1" [(ngModel)]="x1">
+    <br><br>
+    <input class="box" placeholder=" y Value" type="number" name="y1" [(ngModel)]="y1">
+
+    <h3>Point 2</h3>
+    <br>
+    <input class="box" placeholder=" x Value" type="number" name="x2" [(ngModel)]="x2">
+    <br><br>
+    <input class="box" placeholder=" y Value" type="number" name="y2" [(ngModel)]="y2">
+    <br><br>
+    <div class="buttons">
+      <button (click)="calculate()">Calculate</button>
+    </div>
+  </div>
+
+  <div *ngIf="!!m">
+    <h4>Slope = {{m}}</h4>
+    <h4>Y intercept = {{yi}}</h4>
+    <h4>X intercept = {{xi}}</h4>
+  </div>
+</div>
+
+<br>
+<hr>
+
+<div class="style2">
+  <h1>Y Intercept Form</h1>
+  <div class="inputs">
+    <h3>Y Intercept</h3>
+    
+    <br>
+    <input class="box" placeholder=" y Value" type="number" name="y1-y" [(ngModel)]="y1y">
+
+    <h3>Slope</h3>
+    <br>
+    <input class="box" placeholder=" Slope" type="number" name="slope" [(ngModel)]="slope">
+    <br><br>
+    <div class="buttons">
+      <button (click)="calculate2()">Calculate</button>
+    </div>
+  </div>
+  <div *ngIf="!!xInty">
+      <h4>X intercept = {{xInty}}</h4>
+    </div>
+</div>
+
+<br>
+<hr>
+
+<div class="style2">
+  <h1>Point Slope Form</h1>
+  <div class="inputs">
+    <h3>Point 1</h3>
+    
+    <br>
+    <input class="box" placeholder=" x Value" type="number" name="x1-y" [(ngModel)]="xS">
+    <br><br>
+    <input class="box" placeholder=" y Value" type="number" name="y1-y" [(ngModel)]="yS">
+
+    <h3>Slope</h3>
+    <br>
+    <input class="box" placeholder=" Slope" type="number" name="slope" [(ngModel)]="slopeS">
+    <br><br>
+    <div class="buttons">
+      <button (click)="calculate3()">Calculate</button>
+    </div>
+  </div>
+  <div *ngIf="!!xInty3">
+      <h4>Y intercept = {{yInty3}}</h4>
+      <h4>X intercept = {{xInty3}}</h4>
+    </div>
+</div>
+<!-- <svg height="1210" width="1500">
+  <line [attr.x1]="linex1" [attr.y1]="liney1" [attr.x2]="linex2" [attr.y2]="liney2" style="stroke:rgb(255,0,0);stroke-width:2" />
+</svg> -->

@@ -1,0 +1,34 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<title>Scientific Notation</title>
+</head>
+<body>
+    <h1>Convert a Number into Scientific Notation</h1>
+    <form id="mrForm">
+        Number: <input id="inputNumber" type="number"> <br>
+        <p id=exp0></p>
+    </form>
+    <br>
+    <button id="button" onclick="run()">Convert</button>
+    <p>only works with whole numbers above 1</p>
+    <p>BETA version, still developing...</p>
+
+<script>
+    var flyingNumber = +document.getElementById("flyingNumber");
+    var button = document.getElementById('button');
+    var exponent = document.getElementById("exp0");
+    function run() {
+        var inputNumber = +document.getElementById('inputNumber').value;
+        const n = inputNumber.toString().split('').map(Number);
+        n1 = n[0];
+        exp = n.length - 1;
+        divisor = Math.pow(10,exp);
+        lastNumbers = inputNumber/divisor;
+        console.log(lastNumbers);
+        console.log(divisor);       
+        exponent.innerText = lastNumbers + ' x 10' + '^' +exp; 
+    }
+</script>
+</body>
+</html>
